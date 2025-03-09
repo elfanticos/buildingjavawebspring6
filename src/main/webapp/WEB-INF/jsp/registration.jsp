@@ -1,13 +1,28 @@
+<%@ page contentType="text/html; ISO-8859-1" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registration</title>
 </head>
 <body>
-    <h1>${message}</h1>
+<h1>Registration</h1>
+<form:form modelAttribute="registration">
+    <table>
+        <tr>
+            <td>
+                Name:
+            </td>
+            <td>
+                <form:input path="name" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Add Registration">
+            </td>
+        </tr>
+    </table>
+</form:form>
 </body>
 </html>
